@@ -1,0 +1,45 @@
+<div class="formcontainer">
+    <div class="formbody">
+        <form style="width:100%;" [formGroup]="myForm">
+            <div class="header">Register</div>
+            <div>
+                <mat-form-field style="width:100%;">
+                    <input type="text" formControlName="email" matInput placeholder="Email" id="email">
+                </mat-form-field>                
+                <span *ngIf="isValid('email')">Entered email is invalid</span>
+            </div>
+            <div>
+                <mat-form-field style="width:100%;">
+                    <input type="text" formControlName="username" matInput placeholder="Username" id="user">
+                </mat-form-field>
+                <span *ngIf="isValid('username')">Username is required</span>
+            </div>
+            <div>
+                <mat-form-field style="width:100%;">
+                    <input type="password" formControlName="password" matInput placeholder="Password" id="pass">
+                </mat-form-field>
+                <span *ngIf="isValid('password')">Password is a mandatory field</span>
+            </div>
+            <div>
+                <mat-form-field style="width:100%;">
+                    <input type="password" formControlName="cnfpass" matInput placeholder="Re-enter Password" id="cnfpass">
+                </mat-form-field>
+                <span *ngIf="isValid('cnfpass')">Password and confirm password should match</span>
+            </div>
+            <div style="margin-top:20px;">
+                <button class="form-btn" (click)="register()">Register</button>
+            </div>
+
+
+            <div style="text-align: center;">                
+                {{successMessage}}
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <div style="width: 290px; padding: 20px;">
+            <button class="form-btn-hollow" (click)="movetologin()">Login</button>
+        </div>
+    </div>
+</div>

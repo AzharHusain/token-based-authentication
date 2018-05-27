@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boom{
+    width: 60%;
+    background-color: #e9ecef;
+    padding: 4rem;
+    border-radius: .3rem;
+    font-family: 'Lato';
+    margin-top: 40px;
+}
+
+h2 {
+    color: #212121;
+}
+.headerbar {
+    padding: 10px;
+    width: 100%;
+    background-color:cornflowerblue;
+}
+.headerbar > span{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    margin-left: 20px;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
